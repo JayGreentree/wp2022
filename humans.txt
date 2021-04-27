@@ -1,0 +1,18 @@
+/* humanstxt.org */
+
+/* TEAM */
+
+  Jay Greentree
+    Greentree Consulting
+    jay@jaygreentree.com
+    @jaytheitguy1983
+
+  
+  Robert Minkler
+    MVCOG.org
+  
+/* SITE */
+
+  Standards: HTML5, CSS3
+  Components: Bourbon, Neat, Jekyll, jQuery
+  Software: Wordpress, Vim, Git
