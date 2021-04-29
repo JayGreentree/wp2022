@@ -1,0 +1,67 @@
+.wpccRSSfeed {
+
+	ul {
+		list-style:none !important;
+		padding:0 !important;
+		margin:0; 
+		
+		li {
+			margin-bottom: 30px;
+			border-bottom: 1px solid #eee;
+			padding-bottom: 30px;
+			
+			h2 {
+				margin-bottom: 5px;
+				
+				a {
+					transition: all .4s ease;
+				}
+			}
+
+			h2 a:hover {
+				color:#333;
+				text-decoration:underline;
+			}
+			
+			p {
+				font-size: 16px;
+				line-height: 20px;
+				margin: 0 0 20px;
+			}
+			
+			p:last-child {
+				margin-bottom:0;
+			}
+		}
+
+		li.rssFeature { 
+			background: #333;
+			padding: 20px;
+			
+			h2, h2 a, p.meta i, p {
+				color:#fff;
+			}
+
+			p.meta, p a {
+				color:#fff;
+				color:rgba(255,255,255,0.7);
+			}
+
+			p a:hover {
+				color:#fff;
+			}
+		}
+	}
+
+	p.meta {
+		color:#666;
+		font-size: 14px;
+		margin-top:0;
+		
+		span {
+			margin-right: 10px;
+			display:inline-block;
+		}
+	}
+
+}
