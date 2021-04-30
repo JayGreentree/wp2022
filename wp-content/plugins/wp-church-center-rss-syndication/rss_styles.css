@@ -1,0 +1,56 @@
+.wpccRSSfeed ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0;
+}
+.wpccRSSfeed ul li {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+}
+.wpccRSSfeed ul li h2 {
+  margin-bottom: 5px;
+}
+.wpccRSSfeed ul li h2 a {
+  transition: all .4s ease;
+}
+.wpccRSSfeed ul li h2 a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+.wpccRSSfeed ul li p {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 20px;
+}
+.wpccRSSfeed ul li p:last-child {
+  margin-bottom: 0;
+}
+.wpccRSSfeed ul li.rssFeature {
+  background: #333;
+  padding: 20px;
+}
+.wpccRSSfeed ul li.rssFeature h2,
+.wpccRSSfeed ul li.rssFeature h2 a,
+.wpccRSSfeed ul li.rssFeature p.meta i,
+.wpccRSSfeed ul li.rssFeature p {
+  color: #fff;
+}
+.wpccRSSfeed ul li.rssFeature p.meta,
+.wpccRSSfeed ul li.rssFeature p a {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
+}
+.wpccRSSfeed ul li.rssFeature p a:hover {
+  color: #fff;
+}
+.wpccRSSfeed p.meta {
+  color: #666;
+  font-size: 14px;
+  margin-top: 0;
+}
+.wpccRSSfeed p.meta span {
+  margin-right: 10px;
+  display: inline-block;
+}
+/*# sourceMappingURL=rss_styles.css.map */
