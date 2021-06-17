@@ -1,8 +1,12 @@
+</div><!-- /.row -->
+
+</div><!-- /.container -->
+
 
       <!-- FOOTER -->
       <footer class="container">
         <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; <?php echo date("Y"); ?> Mountain Valley Church of God. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p><?php if ( is_active_sidebar( 'footer-copyright-text' ) ) { dynamic_sidebar( 'footer-copyright-text' ); } ?></p>
       </footer>
     </main>
 
@@ -16,9 +20,6 @@
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/holder.min.js"></script>
 
-
-<!-- WordPress Footer and admin bar code -->
 <?php wp_footer(); ?>
-<!-- WordPress Footer and admin bar code -->
 </body>
 </html>

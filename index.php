@@ -1,70 +1,61 @@
-<?php define('WP_USE_THEMES', false); get_header(); ?>
-				
+<?php get_header(); ?>
+<div class="jumbotron" style="background-image: url(http://www.californiafootgolfclub.com/static/img/footgolf-1.jpg); background-size: 100%;">
+   <div class="container for-<?php wp_title(''); ?>">
+   <h1><?php wp_title(''); ?></h1>
+   </div>
+</div>
 
-					<div id="column1">
-					
-					
-					
-<!-- CONTENT COLUMN 1 BEGIN -->
-					<?php if (have_posts()) : ?>
-					<?php while (have_posts()) : the_post(); ?>
-					
-					<!-- Entry Title -->
-					<header>
-						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>">
-						<?php the_title(); ?></a>
-						
-						<!-- Date & Author -->
-						<div id="postmetadata"><h6><?php the_time('F jS, Y') ?></h6></div>
-					</header>
-					
-				
-					<!-- Entry Content -->
-					<div class="entry-content">
-						<?php the_content('Read the rest of this entry &raquo;'); ?>
-					</div>
 
-					<!-- <?php trackback_rdf(); ?> -->
-					<?php endwhile; ?>
-					<!-- Entry Navigation -->
-					<div class="navigation">
-					<div class="alignleft"><?php previous_posts_link('&laquo; Previous') ?></div>
-					<div class="alignright"><?php next_posts_link('Next &raquo;','') ?></div>
-					</div>
-					 
-					<?php else : ?>
-					<h2 class="center">Not Found</h2>
-					<p class="center">
-					<?php _e("Sorry, but you are looking for something that isn't here."); ?></p>
-					
-					<?php endif; ?>
-<!-- CONTENT COLUMN 1 END -->
 
-					</div>
-						<div id="vdivider">
-						<div id="vdtop"></div>
-						<div id="vdmid"></div>
-						<div id="vdbot"></div>
-						</div>
-					<div id="column2">
-					
-<!-- CONTENT COLUMN 2 *RIGHT SIDEBAR* BEGIN -->
-						<ul id="sidebar">
-						<?php if ( !function_exists('dynamic_sidebar')
-								|| !dynamic_sidebar() ) : ?>
-						 <li id="about">
-						  <h2>About</h2>
-						  <p>This is my blog.</p>
-						 </li>
-						 <li id="links">
-						  <h2>Links</h2>
-						  <ul>
-						   <li><a href="http://mvcog.org">mvcog.org</a></li>
-						  </ul>
-						 </li>
-						<?php endif; ?>
-						</ul>
-<!-- CONTENT COLUMN 2 *RIGHT SIDEBAR* END -->
+    <main class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+ <?php 
+    if ( have_posts() ) { 
+        while ( have_posts() ) : the_post();
+    ?>
+          <div class="blog-post">
+            <h2 class="blog-post-title"><?php the_title(); ?></h2>
+            <p class="blog-post-meta"><?php the_date(); ?> by <?php the_author(); ?></p>
 
-					</div>
+           <?php the_content(); ?>
+          </div><!-- /.blog-post -->
+    <?php
+        endwhile;
+    } 
+    ?>
+
+
+          <nav class="blog-pagination">
+            <?php next_posts_link('Older'); ?>
+            <?php previous_posts_link('Newer'); ?>
+            <!--<a class="btn btn-outline-primary" href="#">Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>-->
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <form action="/" method="get">
+              <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Search" />
+            </form>
+          <?php if ( is_active_sidebar( 'sidebar-1' ) ) { dynamic_sidebar( 'sidebar-1' ); } ?>      
+          </div>
+
+          
+
+          <div class="p-3">
+            <?php if ( is_active_sidebar( 'sidebar-2' ) ) { dynamic_sidebar( 'sidebar-2' ); } ?>
+          </div>
+        </aside><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+
+</div><!-- /.blog-main -->
+
+
 <?php get_footer(); ?>

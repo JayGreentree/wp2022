@@ -1,524 +1,219 @@
 /*
-Theme Name: MV2021
-Theme URI: http://mvcog.org/
-Description: Blue theme for Mountain Valley Church of God website 2012-2013.
+
+Theme Name: mv2021
+Theme URI: 
 Author: Jay Greentree
-Author URI: http://jaygreentree.com/
-Version: 1.1
-Tags: blue, white, two-columns, fixed-width, custom
+Author URI: https://jaygreentree.com
+Description: 
+Version: 1.0
 
-License: None
-License URI:
-
-General comments:
 */
-
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* END CSS Reset
-*/
-
-
-/* =Structure & Layout/Image Alignment
------------------------------------------------ */
-
-body {
-	background: #e2e2e2;
-	margin: 0px;
-	padding: 0px;
-	text-align: center;
-}
-#column1 {
-	float: left;
-	margin: 20px 20px 20px 80px;
-	padding: 0px 20px;
-	width: 550px;
-}
-#column2 {
-	float: left;
-	margin: 20px 0px 20px 20px;
-	padding: 20px;
-	width: 200px;
-}
-#onecolumn {
-	float: left;
-	margin: 20px 20px 20px 80px;
-	padding: 0px 20px;
-	width: 850px;
-}
-#vdivider {
-	float: left;
-	margin: 50px 0px 0px 15px;
-	min-height: 500px;
-	width: 1px;
-}
-#vdtop {
-	background-image: url(images/vd_top.GIF);
-	height: 55px;
-	width: 1px;
-}
-#vdmid {
-	background: #002d66;
-	min-height: 500px;
-	width: 1px;
-}
-#vdbot {
-	background-image: url(images/vd_bot.GIF);
-	height: 55px;
-	width: 1px;
-}
-#page {
-	margin-left: auto;
-	margin-right: auto;
-	min-height: 100%;
-	text-align: left;
-	width: 1000px;
-}
-#nestedpage {
-	background: #318dff;
-	background-image: url(images/BG_wash.JPG);
-	background-repeat: repeat-x;
-	float: left;
-	width: 1000px;
-}
-#header {
-	border-style: hidden;
-	line-height: 0px;
-}
-#body1 {
-	min-height: 100%;
-	width: 1000px;
-}
-#sidebar {
-	position: relative;
-	left: 0px;
-	text-align: center;
-	margin: 10px 0;
-}
-.widget {
-	padding: 10px 0;
-}
 
 /*
-Set the page's Minimum height by defining the content_space min_height.
-Page will be content height plus headers and footers. 
-*/
+ * Globals
+ */
 
-#content-space {
-	background: #fff;
-	border-color: #000;
-	border-style: solid;
-	border-width: 0px 1px;
-	float: left;
-	margin: 0px 0px 0px 0px;
-	min-height: 700px;
-	width: 979px;
-}
-#left-shadow {
-	background-image: url(images/left_shadow.PNG);
-	float: left;
-	margin: 0px;
-	min-height:700px;
-	position: relative;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	width: 10px;
-}
-#right-shadow {
-	width: 9px;
-	min-height:700px;
-	background-image: url(images/right_shadow.PNG);
-	margin: 0px;
-	position:relative;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
-	float: left;
-}
-#menu {
-    width: 1000px;
-	max-width: 1000px;
-	height: 40px;
-	background-image: url(images/slicesR3C7.GIF);
-	float: left;
-}
-#R1C1 {
-	height: 220px;
-	width: 568px;
-	float: left;
-}
-#R1C2 {
-	height: 220px;
-	width: 289px;
-	background-image: url(images/slicesR1C2.JPG);
-	float: left;
-}
-#R1C3 {
-	height: 220px;
-	width: 143px;
-	float: left;
-}
-#R2C1 {
-	width: 234px;
-	height: 42px;
-	float: left;
-}
-#R2C2 {
-	width: 766px;
-	height: 42px;
-	float: left;
-	background-image: url(images/slicesR2C2.JPG);
-}
-#R4C1 {
-	width: 10px;
-	height: 13px;
-	background-image: url(images/slicesR4C1.GIF);
-	float: left;
-}
-.R4blk {
-	width: 1px;
-	height: 13px;
-	background-image: url(images/black.GIF);
-	float: left;
-}
-#R4C2 {
-	width: 979px;
-	height: 13px;
-	background-image: url(images/slicesR4C2.GIF);
-	float: left;
-}
-#R4C3 {
-	width: 9px;
-	height: 13px;
-	background-image: url(images/slicesR4C3.JPG);
-	float: left;
-}
-#R6C1 {
-	width: 66px;
-	height: 73px;
-	background-image: url(images/slicesR6C1.PNG);
-	float: left;
-}
-#R6C2 {
-	width: 874px;
-	height: 73px;
-	background-image: url(images/slicesR6C2.GIF);
-	float: left;
-}
-#R6C3 {
-	width: 60px;
-	height: 73px;
-	background-image: url(images/slicesR6C3.PNG);
-	float: left;
-}
-#footer {
-	width: 1000px;
-}
-#menu-spacer {
-	width: 25px;
-	height: 10px;
-	float: left;
-}
-.alignleft {
-	float: left;
-	position: relative;
-	left: 50px;
-}
-.alignright {
-	float: right;
-	position: relative;
-	right: 100px;
-}
-#postmetadata {
-	position: relative;
-	left: 10px;
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
 }
 
-/* Text Formatting */
-body,
-input,
-textarea {
-	color: #373737;
-	font: 15px Helvetica, Arial, sans-serif;
-	font-weight: 300;
-	line-height: 1.6;
-}
-.menu a,
-.menu a:hover,
-.menu a:focus,
-.menu a:active {
-	font: 25px/40px Helvetica, Arial, sans-serif;
-	padding: 0 15px;
-	color: #eee;
-	text-decoration: none;
-	float: left;
-}
-.menu a:hover,
-.menu a:focus,
-.menu a:active {
-	color: #b1c9e6;
-}
-header,
-header a,
-header a:hover,
-header a:focus,
-header a:active {
-	font:italic bold 2em/1.2 Helvetica, Arial, sans-serif;
-	color: #373737;
-	text-decoration: none;
-	position: relative;
-	left: -10px;
-}
-header {
-	margin: 5px 0px 40px 0px;
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
 }
 
 
+/*
+ * Override Bootstrap's default container.
+ */
 
-/* Links */
-a {
-	color: #1982d1;
-	text-decoration: none;
-}
-a:focus,
-a:active,
-a:hover {
-	text-decoration: underline;
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
 }
 
-/* Forms */
-input[type=text],
-input[type=email],
-input[type=password],
-textarea {
-	background: #fafafa;
-	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
-	border: 1px solid #ddd;
-	color: #888;
-}
-input[type=text]:focus,
-textarea:focus {
-	color: #373737;
-}
-textarea {
-	padding-left: 3px;
-	width: 98%;
-}
-input[type=text],
-input[type=email] {
-	padding: 3px;
-}
-input#s {
-	background: url(images/search.png) no-repeat 5px 6px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	font-size: 14px;
-	height: 22px;
-	line-height: 1.2em;
-	padding: 4px 10px 4px 28px;
-}
-input#searchsubmit {
-	display: none;
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
 }
 
-/* Headings */
-h1,h2,h3,h4,h5,h6 {
-	clear: both;
-	font-weight: bold;
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
 }
-h1 {
-	font-size: 2em;
-}
-h2 {
-	font-size: 1.2em;
-}
-h3 {
-	font-size: 1em;
-}
-h4 {
-	font-size: .8em;
-}
-h5 {
-	font-size: .6em;
-}
-h6 {
-	font-size: .4em;
-	color: #777;
-}
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.625em;
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
 }
 
-/* Gobal Text elements */
-p {
-	margin-bottom: 1.625em;
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
 }
-ul, ol {
-	margin: 0;
-}
-ul {
-	list-style: none;
-}
-
-ol {
-	list-style-type: decimal;
-}
-ol ol {
-	list-style: upper-alpha;
-}
-ol ol ol {
-	list-style: lower-roman;
-}
-ol ol ol ol {
-	list-style: lower-alpha;
-}
-ul ul, ol ol, ul ol, ol ul {
-	margin-bottom: 0;
-}
-dl {
-	margin: 0 1.625em;
-}
-dt {
-	font-weight: bold;
-}
-dd {
-	margin-bottom: 1.625em;
-}
-strong {
-	font-weight: bold;
-}
-cite, em, i {
-	font-style: italic;
-}
-blockquote {
-	font-family: Georgia, "Bitstream Charter", serif;
-	font-style: italic;
-	font-weight: normal;
-	margin: 0 3em;
-}
-blockquote em, blockquote i, blockquote cite {
-	font-style: normal;
-}
-blockquote cite {
-	color: #666;
-	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 300;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-}
-pre {
-	background: #f4f4f4;
-	font: 13px "Courier 10 Pitch", Courier, monospace;
-	line-height: 1.5;
-	margin-bottom: 1.625em;
-	overflow: auto;
-	padding: 0.75em 1.625em;
-}
-code, kbd {
-	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-}
-abbr, acronym, dfn {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-address {
-	display: block;
-	margin: 0 0 1.625em;
-}
-ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
-sup,
-sub {
-	font-size: 10px;
-	height: 0;
-	line-height: 1;
-	position: relative;
-	vertical-align: baseline;
-}
-sup {
-	bottom: 1ex;
-}
-sub {
-	top: .5ex;
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
 }
 
-/* Assistive text */
-.assistive-text {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-#access a.assistive-text:active,
-#access a.assistive-text:focus {
-	background: #eee;
-	border-bottom: 1px solid #ddd;
-	color: #1982d1;
-	clip: auto !important;
-	font-size: 12px;
-	position: absolute;
-	text-decoration: underline;
-	top: 0;
-	left: 7.6%;
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
 }
 
-/* Make sure embeds and iframes fit their containers */
-embed,
-iframe,
-object {
-	max-width: 100%;
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/*** lyrathemes - custom styling ***/
+ul.blog-nav {
+    list-style: none;
+    display: inline;
+}
+/* Nav links */
+.menu-item a{
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.menu-item a:hover,
+.menu-item a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.menu-item.current-menu-item a{
+  color: #fff;
+}
+.menu-item.current-menu-item a:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+.sidebar-module ul {
+    list-style: none;
+    padding-left: 0;
 }
