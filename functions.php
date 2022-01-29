@@ -1,9 +1,10 @@
 <?php
+
 /**
  * Register Custom Navigation Walker
  */
 function register_navwalker(){
-    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
 
@@ -19,76 +20,16 @@ register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'THEMENAME' ),
 ) );
 
-
-
-function bootstrapstarter_wp_setup() {
-    add_theme_support( 'title-tag' );
+add_action('wp_loaded', 'output_buffer_start');
+function output_buffer_start() { 
+    ob_start("output_callback"); 
 }
 
-add_action( 'after_setup_theme', 'bootstrapstarter_wp_setup' );
-
-function bootstrapstarter_register_menu() {
-    register_nav_menu('header-menu', __( 'Header Menu' ));
+add_action('shutdown', 'output_buffer_end');
+function output_buffer_end() { 
+    ob_end_flush(); 
 }
-add_action( 'init', 'bootstrapstarter_register_menu' );
 
-function bootstrapstarter_widgets_init() {
-
-    register_sidebar( array(
-        'name'          => 'Header-left',
-        'id'            => 'header-left',
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>',
-    ) );
-
-    register_sidebar( array(
-        'name'          => 'Header-center',
-        'id'            => 'header-cennter',
-        'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>',
-    ) );
-
-    register_sidebar( array(
-        'name'          => 'Header-right',
-        'id'            => 'header-right',
-        'before_widget' => '<div class="col border border-primary">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h2>',
-        'after_title'   => '</h2>',
-    ) );
-
-    register_sidebar( array(
-        'name'          => 'Footer - Copyright Text',
-        'id'            => 'footer-copyright-text',
-        'before_widget' => '<div class="footer_copyright_text">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h4>',
-        'after_title'   => '</h4>',
-    ) );
-    
-    register_sidebar( array(
-        'name'          => 'Sidebar - Inset',
-        'id'            => 'sidebar-1',
-        'before_widget' => '<div class="sidebar-module sidebar-module-inset">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h4>',
-        'after_title'   => '</h4>',
-    ) );
-    
-    register_sidebar( array(
-        'name'          => 'Sidebar - Default',
-        'id'            => 'sidebar-2',
-        'before_widget' => '<div class="sidebar-module">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h4>',
-        'after_title'   => '</h4>',
-    ) );
-
-
+function output_callback($buffer) {
+    return preg_replace( "%[ ]type=[\'\"]text\/(javascript|css)[\'\"]%", '', $buffer );
 }
-add_action( 'widgets_init', 'bootstrapstarter_widgets_init' );
-?>

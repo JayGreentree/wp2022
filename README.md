@@ -1,9 +1,7 @@
-# mv2021 wordpress
+mv2021 wordpress
 
-##CSS Cheat Sheet
+CSS Cheat Sheet
 
-#013852 MV Dark blue
-#428bca MV Light Blue
-#61c1b7 MV Teal
-
-
+#013852     Dark blue
+#428bca     Light Blue
+#61c1b7     Teal

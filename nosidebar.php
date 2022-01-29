@@ -1,7 +1,12 @@
+<?php
+/*
+Template Name: No Sidebar
+*/
+?>
 <?php define('WP_USE_THEMES', false); get_header(); ?>
 				
 
-					<div id="column1">
+					<div id="onecolumn">
 					
 					
 					
@@ -13,9 +18,6 @@
 					<header>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>">
 						<?php the_title(); ?></a>
-						
-						<!-- Date & Author -->
-						<div id="postmetadata"><h6><?php the_time('F jS, Y') ?></h6></div>
 					</header>
 					
 				
@@ -41,30 +43,6 @@
 <!-- CONTENT COLUMN 1 END -->
 
 					</div>
-						<div id="vdivider">
-						<div id="vdtop"></div>
-						<div id="vdmid"></div>
-						<div id="vdbot"></div>
-						</div>
-					<div id="column2">
-					
-<!-- CONTENT COLUMN 2 *RIGHT SIDEBAR* BEGIN -->
-						<ul id="sidebar">
-						<?php if ( !function_exists('dynamic_sidebar')
-								|| !dynamic_sidebar() ) : ?>
-						 <li id="about">
-						  <h2>About</h2>
-						  <p>This is my blog.</p>
-						 </li>
-						 <li id="links">
-						  <h2>Links</h2>
-						  <ul>
-						   <li><a href="http://mvcog.org">mvcog.org</a></li>
-						  </ul>
-						 </li>
-						<?php endif; ?>
-						</ul>
-<!-- CONTENT COLUMN 2 *RIGHT SIDEBAR* END -->
 
-					</div>
+
 <?php get_footer(); ?>
