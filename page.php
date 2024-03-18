@@ -1,4 +1,4 @@
-<?php define('WP_USE_THEMES', false); get_header(); ?>
+<?php get_header(); ?>
 <!-- CONTENT COLUMN 1 BEGIN -->
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
