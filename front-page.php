@@ -3,7 +3,7 @@
 Template Name: No Sidebar
 */
 ?>
-<?php define('WP_USE_THEMES', false); get_header(); ?>
+<?php get_header(); ?>
 
 <div class="jumbotron"
   <?php if(has_post_thumbnail()): ?>style="background-image: url('<?php the_post_thumbnail_url();?>');" <?php endif;?>>
